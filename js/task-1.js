@@ -1,7 +1,12 @@
 const delay = ms => {
  const input = 2000;
 
-  return Promise.resolve(input);
+  return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(ms);
+      }, ms);
+  }
+  );
 
   };
   
